@@ -25,5 +25,7 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     height: 100,
     color: 'white',
+    fontWeight: '200',
+    fontSize: '33',
   }
 });

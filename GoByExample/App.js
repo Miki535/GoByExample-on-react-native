@@ -25,6 +25,7 @@ export default function App() {
       </TouchableOpacity>
       <View style={styles.centeredContainer}>
       <Text style={styles.textB}>Hello World</Text>
+      <Text style={styles.textB}></Text>
       </View>
      </ScrollView>
     <StatusBar style="auto" />

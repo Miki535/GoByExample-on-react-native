@@ -26,7 +26,6 @@ export default function App() {
       <View>
         <BR/>
       <Text style={styles.textB}>Hello World</Text>
-<<<<<<< HEAD
       <Text style={styles.textB}>Values</Text>
       <Text style={styles.textB}>Variables</Text>
       <Text style={styles.textB}>Constants</Text>
@@ -109,9 +108,8 @@ export default function App() {
       <Text style={styles.textB}>Exec'ing Processes</Text>
       <Text style={styles.textB}>Signals</Text>
       <Text style={styles.textB}>Exit</Text>
-=======
       <Text style={styles.textB}></Text>
->>>>>>> 5e80911d1f7edadb4cddcd00a8b4fcbe49c246b7
+      <BR/>
       </View>
      </ScrollView>
     <StatusBar style="auto" />

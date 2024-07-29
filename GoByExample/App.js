@@ -140,18 +140,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     color: '#dadada',
     fontSize: '17.5',
-    fontWeight: '235'
+    fontWeight: '235',
+    textDecorationLine: 'underline',
   },
   centeredContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     height: 100,
-  },
-  link: {
-    color: 'white',
-    textDecorationLine: 'underline',
-    fontSize: '13.5',
-    fontWeight: '200',
   },
 });

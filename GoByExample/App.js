@@ -31,7 +31,7 @@ function HomeScreen({ navigation }) {
       <View>
         <BR/>
        <TouchableOpacity onPress={() => navigation.navigate('HelloWorld')}>
-        <Text style={styles.textB}>Hello World</Text>
+          <Text style={styles.textB}>Hello World</Text>
       </TouchableOpacity>
       <Text style={styles.textB}>Values</Text>
       <Text style={styles.textB}>Variables</Text>
@@ -162,8 +162,15 @@ const styles = StyleSheet.create({
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Navigator 
+        initialRouteName="Home"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#1f1f1f' },  // Колір фону заголовка
+          headerTintColor: '#dadada',  // Колір тексту заголовка
+          headerTitleStyle: { fontWeight: 'bold' },
+        }}
+      >
+        <Stack.Screen name="Go by Exmaple" component={HomeScreen} />
         <Stack.Screen name="HelloWorld" component={HelloWorldScreen} />
       </Stack.Navigator>
     </NavigationContainer>

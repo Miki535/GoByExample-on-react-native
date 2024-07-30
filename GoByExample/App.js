@@ -1,7 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView, StyleSheet, Text, Linking, View, TouchableOpacity } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HelloWorldScreen from './screens/HelloWorldScreen';
 
-export default function App() {
+const Stack = createStackNavigator();
+
+function HomeScreen({ navigation }) {
   
   const handlePress = () => {
     Linking.openURL('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
@@ -25,7 +30,9 @@ export default function App() {
       </TouchableOpacity>
       <View>
         <BR/>
-      <Text style={styles.textB}>Hello World</Text>
+       <TouchableOpacity onPress={() => navigation.navigate('HelloWorld')}>
+        <Text style={styles.textB}>Hello World</Text>
+      </TouchableOpacity>
       <Text style={styles.textB}>Values</Text>
       <Text style={styles.textB}>Variables</Text>
       <Text style={styles.textB}>Constants</Text>
@@ -151,3 +158,14 @@ const styles = StyleSheet.create({
     height: 100,
   },
 });
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="HelloWorld" component={HelloWorldScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}

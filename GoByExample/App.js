@@ -14,7 +14,6 @@ function HomeScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.main}>Go by Example</Text>
       <ScrollView>
       <BR />
       <TouchableOpacity onPress={handlePress}>
@@ -165,14 +164,18 @@ export default function App() {
       <Stack.Navigator 
         initialRouteName="Home"
         screenOptions={{
-          headerStyle: { backgroundColor: '#1f1f1f' },  
-          headerTintColor: '#dadada',
-          headerTitleStyle: { fontWeight: 'bold' },
+          headerStyle: { backgroundColor: '#1f1f1f' }, // Фон заголовка
+          headerTintColor: '#dadada', // Колір тексту заголовка
+          headerTitleStyle: { 
+            fontWeight: '200',
+            fontSize: 33 // Розмір тексту заголовка
+          },
+          headerTitleAlign: 'center', // Вирівнювання заголовка по центру
         }}
       >
         <Stack.Screen name="Go by Exmaple" component={HomeScreen} />
         <Stack.Screen name="HelloWorld" component={HelloWorldScreen} />
-      </Stack.Navigator>
+        </Stack.Navigator>
     </NavigationContainer>
   );
 }

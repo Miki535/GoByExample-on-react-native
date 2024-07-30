@@ -142,6 +142,7 @@ const styles = StyleSheet.create({
     fontSize: '17.5',
     fontWeight: '235',
     textDecorationLine: 'underline',
+    marginLeft: 5,
   },
   centeredContainer: {
     flex: 1,

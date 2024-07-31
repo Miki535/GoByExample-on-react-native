@@ -4,21 +4,25 @@ import { View, Text, StyleSheet } from 'react-native';
 const HelloWorldScreen = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Hello World!</Text>
+      <BR/>
+      <Text style={styles.text}>Our first program will print the classic “hello world” message.</Text>
+      <Text style={styles.text}>Here’s the full source code.</Text>
     </View>
   );
 };
+// Using <BR /> like <br> in html
+const BR = () => <View style={{ height: 23 }} />;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#1f1f1f',
   },
   text: {
-    fontSize: 24,
-    color: '#dadada'
+    fontSize: 25,
+    color: '#dadada',
+    fontWeight: '200'
   },
 });
 

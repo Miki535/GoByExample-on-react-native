@@ -174,7 +174,11 @@ export default function App() {
         }}
       >
         <Stack.Screen name="Go by Exmaple" component={HomeScreen} />
-        <Stack.Screen name="HelloWorld" component={HelloWorldScreen} />
+        <Stack.Screen 
+          name="HelloWorld" // Ім'я екрану, яке використовується для навігації
+          component={HelloWorldScreen}
+          options={{ title: 'Hello World!' }}
+        />
         </Stack.Navigator>
     </NavigationContainer>
   );

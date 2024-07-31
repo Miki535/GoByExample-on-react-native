@@ -8,6 +8,10 @@ const HelloWorldScreen = () => {
   
   return (
     <View style={styles.container}>
+      <BR/>
+      <Text style={styles.text}>Our first program will print the classic “hello world” message.</Text>
+      <Text style={styles.text}>Here’s the full source code.</Text>
+      <BR/>
       <View style={styles.containerdd}>
       <View style={styles.header}>
         <View style={styles.circle}></View>
@@ -31,14 +35,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#1f1f1f',
   },
   containerdd: {
-    backgroundColor: '#2E3440',
+    backgroundColor: '#708090',
     padding: 16,
     borderRadius: 8,
   },
   text: {
-    fontSize: 25,
+    fontSize: 14,
     color: '#dadada',
-    fontWeight: '200'
+    fontWeight: '600',
   },
   header: {
     flexDirection: 'row',

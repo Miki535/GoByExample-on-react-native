@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#dadada',
-    fontSize: '13.5',
+    fontSize: 13.5,
     fontWeight: '200',
   },
   main: {
@@ -140,12 +140,12 @@ const styles = StyleSheet.create({
     height: 100,
     color: 'white',
     fontWeight: '200',
-    fontSize: '33',
+    fontSize: 33,
   },
   textB: {
     alignItems: 'center',
     color: '#dadada',
-    fontSize: '17.5',
+    fontSize: 17,
     fontWeight: '235',
     textDecorationLine: 'underline',
     marginLeft: 5,

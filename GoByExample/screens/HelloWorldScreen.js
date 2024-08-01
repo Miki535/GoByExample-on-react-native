@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 16,
     flex: 1,
-    alignItems: 'center',
+    alignItems: '',
     backgroundColor: '#1f1f1f',
   },
   containerdd: {
@@ -46,8 +46,6 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   text: {
-    paddingLeft: 20,
-    paddingRight: 20,
     fontSize: 14,
     color: '#dadada',
     fontWeight: '600',

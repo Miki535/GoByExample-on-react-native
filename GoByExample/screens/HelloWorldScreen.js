@@ -21,6 +21,12 @@ const HelloWorldScreen = () => {
         {'package main\n\nimport "fmt"\n\nfunc main() {\n    fmt.Println("hello world")\n}'}
       </Text>
     </View> 
+    <BR/>
+    <Text style={styles.text}>To run the program, put the code in hello-world.go and use go run hello-world.go.</Text>
+    <BR/>
+    <Text style={styles.text}>Sometimes we’ll want to build our programs into binaries. We can do this using go build hello-world.go.</Text>
+    <BR/>
+    <Text style={styles.text}>Now that we can run and build basic Go programs, let’s learn more about the language.</Text>
     </View>
 );
 }
@@ -29,6 +35,7 @@ const BR = () => <View style={{ height: 23 }} />;
 
 const styles = StyleSheet.create({
   container: {
+    padding: 16,
     flex: 1,
     alignItems: 'center',
     backgroundColor: '#1f1f1f',
@@ -39,6 +46,8 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   text: {
+    paddingLeft: 20,
+    paddingRight: 20,
     fontSize: 14,
     color: '#dadada',
     fontWeight: '600',

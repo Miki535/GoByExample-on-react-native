@@ -9,7 +9,7 @@ const HelloWorldScreen = () => {
       <Text style={styles.text}>Our first program will print the classic “hello world” message.</Text>
       <Text style={styles.text}>Here’s the full source code.</Text>
       <BR/>
-      <View style={styles.containerdd}>
+      <View style={styles.codeContainer}>
       <View style={styles.header}>
         <View style={styles.circle}></View>
         <View style={styles.circle}></View>
@@ -37,10 +37,10 @@ const styles = StyleSheet.create({
   container: {
     padding: 16,
     flex: 1,
-    alignItems: '',
+    alignItems: 'left',
     backgroundColor: '#1f1f1f',
   },
-  containerdd: {
+  codeContainer: {
     backgroundColor: '#708090',
     padding: 16,
     borderRadius: 8,
@@ -48,7 +48,9 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 14,
     color: '#dadada',
-    fontWeight: '600',
+    fontWeight: '700',
+    fontStyle: 'normal',
+    fontFamily: 'serif',
   },
   header: {
     flexDirection: 'row',

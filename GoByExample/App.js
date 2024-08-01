@@ -152,6 +152,8 @@ const styles = StyleSheet.create({
     fontWeight: '235',
     textDecorationLine: 'underline',
     marginLeft: 5,
+    fontStyle: 'normal',
+    fontFamily: 'serif',
   },
   centeredContainer: {
     flex: 1,
@@ -172,11 +174,12 @@ export default function App() {
           headerTitleStyle: { 
             fontWeight: '200',
             fontSize: 33,
+            fontFamily: 'serif',
           },
           headerTitleAlign: 'center', 
         }}
       >
-        <Stack.Screen name="Go by Exmaple" component={HomeScreen} />
+        <Stack.Screen name="Go by Example" component={HomeScreen} />
         <Stack.Screen 
           name="HelloWorld" //Screen name used for navigation
           component={HelloWorldScreen}

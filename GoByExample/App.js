@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet, Text, Linking, View, TouchableOpacity } from 'r
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HelloWorldScreen from './screens/HelloWorldScreen';
+import ValuesScreen from './screens/ValuesScreen';
 
 const Stack = createStackNavigator();
 
@@ -32,7 +33,9 @@ function HomeScreen({ navigation }) {
        <TouchableOpacity onPress={() => navigation.navigate('HelloWorld')}>
           <Text style={styles.textB}>Hello World</Text>
       </TouchableOpacity>
-      <Text style={styles.textB}>Values</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Values')}>
+        <Text style={styles.textB}>Values</Text>
+      </TouchableOpacity>
       <Text style={styles.textB}>Variables</Text>
       <Text style={styles.textB}>Constants</Text>
       <Text style={styles.textB}>For</Text>
@@ -164,20 +167,25 @@ export default function App() {
       <Stack.Navigator 
         initialRouteName="Home"
         screenOptions={{
-          headerStyle: { backgroundColor: '#1f1f1f' }, // Фон заголовка
-          headerTintColor: '#dadada', // Колір тексту заголовка
+          headerStyle: { backgroundColor: '#1f1f1f' }, 
+          headerTintColor: '#dadada', 
           headerTitleStyle: { 
             fontWeight: '200',
-            fontSize: 33 // Розмір тексту заголовка
+            fontSize: 33,
           },
-          headerTitleAlign: 'center', // Вирівнювання заголовка по центру
+          headerTitleAlign: 'center', 
         }}
       >
         <Stack.Screen name="Go by Exmaple" component={HomeScreen} />
         <Stack.Screen 
-          name="HelloWorld" // Ім'я екрану, яке використовується для навігації
+          name="HelloWorld" //Screen name used for navigation
           component={HelloWorldScreen}
           options={{ title: 'Hello World!' }}
+        />
+        <Stack.Screen 
+          name="Values" // Screen name used for navigation
+          component={ValuesScreen}
+          options={{ title: 'Values' }}
         />
         </Stack.Navigator>
     </NavigationContainer>

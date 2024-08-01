@@ -3,8 +3,6 @@ import { View, Text, StyleSheet } from 'react-native';
 
 const HelloWorldScreen = () => {
   
-  
-  
   return (
     <View style={styles.container}>
       <BR/>
@@ -27,6 +25,8 @@ const HelloWorldScreen = () => {
     <Text style={styles.text}>Sometimes we’ll want to build our programs into binaries. We can do this using go build hello-world.go.</Text>
     <BR/>
     <Text style={styles.text}>Now that we can run and build basic Go programs, let’s learn more about the language.</Text>
+    <BR/>
+    <Text style={styles.text}>Next example: Values.</Text>
     </View>
 );
 }

@@ -149,7 +149,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     color: '#dadada',
     fontSize: 17,
-    fontWeight: '235',
     textDecorationLine: 'underline',
     marginLeft: 5,
     fontStyle: 'normal',

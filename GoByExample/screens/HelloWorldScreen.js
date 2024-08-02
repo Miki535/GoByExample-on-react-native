@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   code: {
     color: '#D8DEE9',
     fontFamily: 'monospace',
-    fontSize: 16,
+    fontSize: 14,
     lineHeight: 24,
   },
 });

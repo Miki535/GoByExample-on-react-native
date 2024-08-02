@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
 const HelloWorldScreen = () => {
   
@@ -20,6 +20,7 @@ const HelloWorldScreen = () => {
       </Text>
     </View> 
     <BR/>
+    <ScrollView>
     <Text style={styles.text}>To run the program, put the code in hello-world.go and use go run hello-world.go.</Text>
     <BR/>
     <Text style={styles.text}>Sometimes we’ll want to build our programs into binaries. We can do this using go build hello-world.go.</Text>
@@ -27,6 +28,7 @@ const HelloWorldScreen = () => {
     <Text style={styles.text}>Now that we can run and build basic Go programs, let’s learn more about the language.</Text>
     <BR/>
     <Text style={styles.text}>Next example: Values.</Text>
+    </ScrollView>
     </View>
 );
 }
@@ -65,8 +67,8 @@ const styles = StyleSheet.create({
   },
   code: {
     color: '#D8DEE9',
-    fontFamily: 'monospace',
-    fontSize: 14,
+    fontFamily: 'Times New Roman',
+    fontSize: 22,
     lineHeight: 24,
   },
 });

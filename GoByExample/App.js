@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
   textB: {
     alignItems: 'center',
     color: '#dadada',
-    fontSize: 17,
+    fontSize: Platform.OS === "ios"? 25: 17,
     textDecorationLine: 'underline',
     marginLeft: 5,
     fontStyle: 'normal',

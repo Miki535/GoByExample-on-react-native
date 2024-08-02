@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { ScrollView, StyleSheet, Text, Linking, View, TouchableOpacity } from 'react-native';
+import { ScrollView, StyleSheet, Text, Linking, View, TouchableOpacity, Platform } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HelloWorldScreen from './screens/HelloWorldScreen';
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
     marginLeft: 5,
     fontStyle: 'normal',
-    fontFamily: 'serif',
+    fontFamily: Platform.OS === "ios"? 'Times New Roman': 'serif',
   },
   centeredContainer: {
     flex: 1,
@@ -173,7 +173,7 @@ export default function App() {
           headerTitleStyle: { 
             fontWeight: '200',
             fontSize: 33,
-            fontFamily: 'serif',
+            fontFamily: Platform.OS === "ios"? 'Times New Roman': 'serif',
           },
           headerTitleAlign: 'center', 
         }}

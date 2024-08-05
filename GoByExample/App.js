@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HelloWorldScreen from './screens/HelloWorldScreen';
 import ValuesScreen from './screens/ValuesScreen';
+import ExitScreen from './screens/ExitScreen';
 
 const Stack = createStackNavigator();
 
@@ -116,8 +117,10 @@ function HomeScreen({ navigation }) {
       <Text style={styles.textB}>Spawning Processes</Text>
       <Text style={styles.textB}>Exec'ing Processes</Text>
       <Text style={styles.textB}>Signals</Text>
-      <Text style={styles.textB}>Exit</Text>
-      <Text style={styles.textB}></Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Exit')}>
+        <Text style={styles.textB}>Exit</Text>
+      </TouchableOpacity>
+      <BR/>
       <BR/>
       </View>
      </ScrollView>
@@ -188,6 +191,11 @@ export default function App() {
           name="Values" // Screen name used for navigation
           component={ValuesScreen}
           options={{ title: 'Values' }}
+        />
+        <Stack.Screen 
+          name="Exit" // Screen name used for navigation
+          component={ExitScreen}
+          options={{ title: 'Exit' }}
         />
         </Stack.Navigator>
     </NavigationContainer>

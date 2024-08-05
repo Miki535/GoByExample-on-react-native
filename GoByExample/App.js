@@ -199,7 +199,7 @@ export default function App() {
         <Stack.Screen 
           name="Exit" // Screen name used for navigation
           component={ExitScreen}
-          options={{ title: 'Exit' }}
+          options={{ title: 'os.Exit(1)' }}
         />
         <Stack.Screen 
           name="HTUSE" // Screen name used for navigation

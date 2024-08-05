@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HelloWorldScreen from './screens/HelloWorldScreen';
 import ValuesScreen from './screens/ValuesScreen';
 import ExitScreen from './screens/ExitScreen';
+import HowToUseGobyExample from './screens/HowToUseGobyExample';
 
 const Stack = createStackNavigator();
 
@@ -31,6 +32,9 @@ function HomeScreen({ navigation }) {
       </TouchableOpacity>
       <View>
         <BR/>
+        <TouchableOpacity onPress={() => navigation.navigate('HTUSE')}>
+          <Text style={styles.textB}>How to use Go by Example?</Text>
+      </TouchableOpacity>
        <TouchableOpacity onPress={() => navigation.navigate('HelloWorld')}>
           <Text style={styles.textB}>Hello World</Text>
       </TouchableOpacity>
@@ -196,6 +200,11 @@ export default function App() {
           name="Exit" // Screen name used for navigation
           component={ExitScreen}
           options={{ title: 'Exit' }}
+        />
+        <Stack.Screen 
+          name="HTUSE" // Screen name used for navigation
+          component={HowToUseGobyExample}
+          options={{ title: 'Docs' }}
         />
         </Stack.Navigator>
     </NavigationContainer>

@@ -15,7 +15,7 @@ const VariablesScreen = () => {
             <View style={styles.circle}></View>
           </View>
           <Text style={styles.code}>
-            {'package main\n\nimport "fmt"\n\nfunc main() {\n    \n    var a = "initial"\n    fmt.Println(a)\n\n    var b, c int = 1, 2\n    fmt.Println(b, c)\n    fmt.Println(true || false)\n    fmt.Println(!true)\n}'}
+            {'package main\n\nimport "fmt"\n\nfunc main() {\n    \n    var a = "initial"\n    fmt.Println(a)\n\n    var b, c int = 1, 2\n    fmt.Println(b, c)\n    \n    var в = true\n    fmt.Println(b, c)\n}'}
           </Text>
         </View> 
         <BR/>

@@ -7,6 +7,7 @@ import ValuesScreen from './screens/ValuesScreen';
 import ExitScreen from './screens/ExitScreen';
 import HowToUseGobyExample from './screens/HowToUseGobyExample';
 import HttpClientScreen from './screens/HttpClientScreen';
+import VariablesScreen from './screens/VariablesScreen';
 
 const Stack = createStackNavigator();
 
@@ -42,7 +43,9 @@ function HomeScreen({ navigation }) {
       <TouchableOpacity onPress={() => navigation.navigate('Values')}>
         <Text style={styles.textB}>Values</Text>
       </TouchableOpacity>
-      <Text style={styles.textB}>Variables</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Variables')}>
+        <Text style={styles.textB}>Variables</Text>
+      </TouchableOpacity>
       <Text style={styles.textB}>Constants</Text>
       <Text style={styles.textB}>For</Text>
       <Text style={styles.textB}>If/Else</Text>
@@ -213,6 +216,11 @@ export default function App() {
           name="HttpClient" // Screen name used for navigation
           component={HttpClientScreen}
           options={{ title: 'HTTP Client' }}
+        />
+        <Stack.Screen 
+          name="Variables" // Screen name used for navigation
+          component={VariablesScreen}
+          options={{ title: 'Variables' }}
         />
         </Stack.Navigator>
     </NavigationContainer>

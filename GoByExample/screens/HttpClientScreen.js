@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Platform } from 'react-native';
 
 const HttpClientScreen = () => {
   
   return (
     <View style={styles.container}>
-      <BR/>
+      <ScrollView>
       <Text style={styles.text}>The Go standard library comes with excellent support for HTTP clients and servers in the net/http package. In this example we’ll use it to issue simple HTTP requests.</Text>
       <BR/>
       <View style={styles.codeContainer}>
@@ -19,7 +19,6 @@ const HttpClientScreen = () => {
       </Text>
     </View> 
     <BR/>
-    <ScrollView>
     <Text style={styles.text}>Issue an HTTP GET request to a server. http.Get is a convenient shortcut around creating an http.Client object and calling its Get method; it uses the http.DefaultClient object which has useful default settings.</Text>
     <BR/>
     <Text style={styles.text}>Print the HTTP response status.</Text>
@@ -27,7 +26,8 @@ const HttpClientScreen = () => {
     <Text style={styles.text}>Print the first 5 lines of the response body.</Text>
     <BR/>
     <Text style={styles.text}>Next example: HTTP Server.</Text>
-    </ScrollView>
+    <BR/>
+      </ScrollView>
     </View>
 );
 }
@@ -66,9 +66,9 @@ const styles = StyleSheet.create({
   },
   code: {
     color: '#D8DEE9',
-    fontFamily: 'Times New Roman',
-    fontSize: 14,
-    lineHeight: 15,
+    fontFamily: Platform.OS === "ios"? 'Times New Roman': 'serif',
+    fontSize: Platform.OS === "ios"? 14: 10,
+    lineHeight: 14,
   },
 });
 

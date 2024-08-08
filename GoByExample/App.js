@@ -6,6 +6,7 @@ import HelloWorldScreen from './screens/HelloWorldScreen';
 import ValuesScreen from './screens/ValuesScreen';
 import ExitScreen from './screens/ExitScreen';
 import HowToUseGobyExample from './screens/HowToUseGobyExample';
+import HttpClientScreen from './screens/HttpClientScreen';
 
 const Stack = createStackNavigator();
 
@@ -115,7 +116,9 @@ function HomeScreen({ navigation }) {
       <Text style={styles.textB}>Command-Line Subcommands</Text>
       <Text style={styles.textB}>Environment Variables</Text>
       <Text style={styles.textB}>Logging</Text>
-      <Text style={styles.textB}>HTTP Client</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('HttpClient')}>
+        <Text style={styles.textB}>HTTP Client</Text>
+      </TouchableOpacity>
       <Text style={styles.textB}>HTTP Server</Text>
       <Text style={styles.textB}>Context</Text>
       <Text style={styles.textB}>Spawning Processes</Text>
@@ -205,6 +208,11 @@ export default function App() {
           name="HTUSE" // Screen name used for navigation
           component={HowToUseGobyExample}
           options={{ title: 'Docs' }}
+        />
+        <Stack.Screen 
+          name="HttpClient" // Screen name used for navigation
+          component={HttpClientScreen}
+          options={{ title: 'HTTP Client' }}
         />
         </Stack.Navigator>
     </NavigationContainer>
